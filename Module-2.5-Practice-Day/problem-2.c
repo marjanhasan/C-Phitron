@@ -7,6 +7,7 @@ int main()
     int sub = a - b;
     int mul = a * b;
     float div = a * 1.0 / b;
+    printf("hello\n");
     printf("%d + %d = %d\n", a, b, sum);
     printf("%d - %d = %d\n", a, b, sub);
     printf("%d * %d = %d\n", a, b, mul);
