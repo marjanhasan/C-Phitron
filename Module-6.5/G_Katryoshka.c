@@ -2,55 +2,50 @@
 #include <limits.h>
 int main()
 {
-    long long int a, b, c, body = 0;
-    scanf("%lld%lld%lld", &a, &b, &c);
-    if (a <= 0 || c <= 0)
+    long long int eyes, mouth, body, statue = 0;
+    scanf("%lld%lld%lld", &eyes, &mouth, &body);
+    if (eyes <= 0 || body <= 0)
     {
-        printf("%d\n", body);
+        printf("%d\n", statue);
         return 0;
     }
-    if (a <= b && a <= c)
+    if (eyes <= mouth && eyes <= body)
     {
-        b -= a;
-        c -= a;
-        body += a;
-        a -= a;
+        mouth -= eyes;
+        body -= eyes;
+        statue += eyes;
+        eyes -= eyes;
     }
-    else if (b <= a && b <= c)
+    else if (mouth <= eyes && mouth <= body)
     {
-        a -= b;
-        c -= b;
-        body += b;
-        b -= b;
+        eyes -= mouth;
+        body -= mouth;
+        statue += mouth;
+        mouth -= mouth;
     }
     else
     {
-        a -= c;
-        b -= c;
-        body += c;
-        c -= c;
+        eyes -= body;
+        mouth -= body;
+        statue += body;
+        body -= body;
     }
-    if (a <= 0 || c <= 0)
+    if (eyes <= 0 || body <= 0)
     {
-        printf("%d\n", body);
+        printf("%d\n", statue);
         return 0;
     }
-    a /= 2;
-    if (a < c)
+    long long int temp = (eyes / 2);
+    if (temp <= body)
     {
-        c -= a;
-        body += a;
-        a -= a;
+        statue += temp;
+        printf("%d\n", statue);
     }
     else
     {
-        a -= c;
-        body += c;
-        c -= c;
+        statue += body;
+        printf("%d\n", statue);
     }
-    if (a <= 0 || c <= 0)
-    {
-        printf("%d\n", body);
-    }
+
     return 0;
 }
