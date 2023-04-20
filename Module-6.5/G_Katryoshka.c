@@ -1,51 +1,43 @@
 #include <stdio.h>
-#include <limits.h>
 int main()
 {
-    long long int eyes, mouth, body, statue = 0;
-    scanf("%lld%lld%lld", &eyes, &mouth, &body);
-    if (eyes <= 0 || body <= 0)
+    long long int a, b, c, ans;
+    scanf("%lld%lld%lld", &a, &b, &c);
+    if (a <= b && a <= c)
     {
-        printf("%d\n", statue);
-        return 0;
+        ans = a;
     }
-    if (eyes <= mouth && eyes <= body)
+    else if (b <= a && b <= c)
     {
-        mouth -= eyes;
-        body -= eyes;
-        statue += eyes;
-        eyes -= eyes;
-    }
-    else if (mouth <= eyes && mouth <= body)
-    {
-        eyes -= mouth;
-        body -= mouth;
-        statue += mouth;
-        mouth -= mouth;
+        ans = b;
     }
     else
     {
-        eyes -= body;
-        mouth -= body;
-        statue += body;
-        body -= body;
+        ans = c;
     }
-    if (eyes <= 0 || body <= 0)
+    a -= ans;
+    b -= ans;
+    c -= ans;
+    a /= 2;
+    if (a < c)
     {
-        printf("%d\n", statue);
-        return 0;
-    }
-    long long int temp = (eyes / 2);
-    if (temp <= body)
-    {
-        statue += temp;
-        printf("%d\n", statue);
+        ans += a;
     }
     else
     {
-        statue += body;
-        printf("%d\n", statue);
+        ans += c;
     }
-
+    printf("%d\n", ans);
     return 0;
 }
+
+// min = a;
+//     if (b < min)
+//     {
+//         min = b;
+//     }
+
+//     if (c < min)
+//     {
+//         min = c;
+//     }

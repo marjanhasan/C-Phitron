@@ -1,0 +1,1 @@
+{"name":"Local: C_replacement","url":"c:\\Users\\tomar\\Desktop\\Folders\\Phitron\\C-Phitron\\Module-7.5\\C_replacement.c","tests":[{"id":1681846585588,"input":"5\n1 -2 0 3 4","output":"1 2 0 1 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\tomar\\Desktop\\Folders\\Phitron\\C-Phitron\\Module-7.5\\C_replacement.c","group":"local","local":true}
